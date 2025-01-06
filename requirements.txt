@@ -1,0 +1,10 @@
+jupyterlab
+seaborn
+matplotlib
+numpy
+pandas
+scipy
+joblib
+torch
+# ! pip install torch-scatter -f https://data.pyg.org/whl/torch-2.4.0+cpu.html
+# ! pip install torch-geometric

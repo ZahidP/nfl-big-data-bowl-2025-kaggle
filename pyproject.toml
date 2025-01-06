@@ -1,0 +1,50 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nfl-data-bowl"
+version = "0.1.0"
+authors = [
+    {name = "Zahid Panjwani", email = "your.email@example.com"}
+]
+description = "My project"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = [
+    "jupyter",
+    "ipython",
+    "black",
+    "isort",
+    "flake8"
+]
+
+ml = [
+    "torch",
+    "pandas",
+    "numpy",
+    "torch-geometric",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "tqdm"
+]
+
+# [tool.setuptools.dynamic]
+# # Dynamically read version from SCM
+# version = {use_scm = true}
+
+[tool.setuptools.package-data]
+nfl_data_bowl = ["*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nfl_data_bowl*"]
+exclude = ["old", "data", "notebooks"]
